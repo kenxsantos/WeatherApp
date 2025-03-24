@@ -39,6 +39,7 @@ dependencies:
   dio: ^5.8.0+1
   io: ^1.0.5
   intl: ^0.20.2
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
