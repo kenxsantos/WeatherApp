@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import 'package:weatherapp/core/constant.dart';
 
 class WeatherService {
   final Dio dio;
@@ -14,20 +15,11 @@ class WeatherService {
     };
   }
 
-  Future<dynamic> fetchWeather(String place, String appKey) async {
-    try {
-      // Define the API URL and query parameters
-      final response = await dio.get(
-        'https://api.openweathermap.org/data/2.5/weather',
-        queryParameters: {'q': place, 'appid': appKey, 'units': 'metric'},
-        options: Options(headers: {'Content-Type': 'application/json'}),
-      );
-      print('Weather data: ${response.data}');
-      return response.data;
-    } catch (e) {
-      // Handle errors
-      print('Error: $e');
-    }
+  Future<Map<String, dynamic>> fetchWeather(String location) async {
+    final response = await dio.get(
+      '${AppConstants.baseUrl}weather?q=$location&appid=${AppConstants.apiKey}&units=metric',
+    );
+    return response.data;
   }
 }
 
