@@ -133,14 +133,14 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.home_outlined),
                 color: Colors.white,
                 onPressed: () {
                   print('Home Clicked');
                 },
               ),
               IconButton(
-                icon: Icon(Icons.search),
+                icon: Icon(Icons.cloud_outlined),
                 color: Colors.white,
                 onPressed: () {
                   print('Search Clicked');
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               IconButton(
-                icon: Icon(Icons.notifications),
+                icon: Icon(Icons.favorite_outline_sharp),
                 color: Colors.white,
                 onPressed: () {
                   print('Notifications Clicked');

@@ -21,7 +21,7 @@ class IconTextColumn extends StatelessWidget {
         IconButton(
           icon: Icon(icon),
           color: Colors.white,
-          iconSize: 32,
+          iconSize: 24,
           onPressed: onPressed,
         ),
         Text(
@@ -38,7 +38,7 @@ class IconTextColumn extends StatelessWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 12,
+            fontSize: 10,
             color: const Color.fromARGB(221, 139, 138, 138),
           ),
         ),
