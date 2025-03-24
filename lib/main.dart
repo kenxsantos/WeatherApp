@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:weatherapp/screens/landing_page.dart';
+import 'package:weatherapp/viewmodels/home_viewmodel_provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,11 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Weather App',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
-        home: LandingPage(),
+      home: HomeViewModelProvider(),
     );
   }
 }

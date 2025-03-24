@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weatherapp/screens/home_page.dart';
- 
+import 'package:weatherapp/screens/weather_page.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -17,7 +16,7 @@ class _LandingPageState extends State<LandingPage> {
       body: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Discover The Weather in Your City',
@@ -35,47 +34,40 @@ class _LandingPageState extends State<LandingPage> {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/weather.png"),
-                  )
+                ),
               ),
             ),
-             Text(
+            Text(
               'Get to know your weather maps and radar precipitation forcast',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
+              style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
             SizedBox(height: 50),
             SizedBox(
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(builder: (context) => HomePage())
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WeatherPage()),
                   );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(223, 241, 148, 9),
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-        ),
-              ),
-               child: Text(
-                "Get Started",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(223, 241, 148, 9),
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
-               ),
-
+                child: Text(
+                  "Get Started",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                ),
               ),
-            )
+            ),
           ],
-      ),
+        ),
       ),
     );
   }
