@@ -124,33 +124,21 @@ class WeatherPage extends StatelessWidget {
                           icon: Icons.water_drop,
                           text1: '${weatherViewModel.weather!.humidity}%',
                           text2: 'Humidity',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.thermostat,
                           text1: '${weatherViewModel.weather!.pressure} hPa',
                           text2: 'Pressure',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.speed,
                           text1: '${weatherViewModel.weather!.windSpeed} km/h',
                           text2: 'Speed',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.wind_power_rounded,
                           text1: ' ${weatherViewModel.weather!.windDeg}°',
                           text2: 'Direction',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                       ],
                     ),
@@ -163,17 +151,11 @@ class WeatherPage extends StatelessWidget {
                           icon: Icons.cloud,
                           text1: '${weatherViewModel.weather!.windDeg}%',
                           text2: 'Cloud',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.visibility,
                           text1: '${weatherViewModel.weather!.visibility}',
                           text2: 'Visibility',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.sunny,
@@ -181,9 +163,6 @@ class WeatherPage extends StatelessWidget {
                             DateTime.parse(weatherViewModel.weather!.sunrise!),
                           ),
                           text2: 'Sunrise',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                         IconTextColumn(
                           icon: Icons.nightlight_round,
@@ -191,9 +170,6 @@ class WeatherPage extends StatelessWidget {
                             DateTime.parse(weatherViewModel.weather!.sunset!),
                           ),
                           text2: 'Sunset',
-                          onPressed: () {
-                            print('Icon Clicked');
-                          },
                         ),
                       ],
                     ),
